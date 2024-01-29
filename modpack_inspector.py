@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return jsonify(status="success", message="CI/CD Pipeline Test Successful")
+    return jsonify(status="success", message="CI/CD Pipeline Test Successful again!")
 
 
 if __name__ == "__main__":
