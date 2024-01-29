@@ -37,4 +37,4 @@ jobs:
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: modpack-inspector-instance
-        location: 'Your Azure Location'  # Replace with your Azure location, e.g., eastus
+        location: 'eastus'
