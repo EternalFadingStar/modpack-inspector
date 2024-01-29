@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
     return jsonify(
         status="success",
-        message="CI/CD Pipeline Test Successful again! Newly configured secret!",
+        message="The new commit system is now working!",
     )
 
 
