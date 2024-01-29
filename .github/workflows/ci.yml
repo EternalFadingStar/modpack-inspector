@@ -67,3 +67,8 @@ jobs:
       run: |
         az container delete --name modpack-inspector-aci --resource-group modpack-inspector-group --yes
         az container create --resource-group modpack-inspector-group --name modpack-inspector-aci --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/modpack-inspector:${{ github.sha }} --dns-name-label modpack-inspector-${{ github.run_id }} --registry-login-server ${{ secrets.REGISTRY_LOGIN_SERVER }} --registry-username ${{ secrets.AZURE_REGISTRY_USERNAME }} --registry-password ${{ secrets.AZURE_REGISTRY_PASSWORD }} --location eastus --cpu 1 --memory 1.5
+
+    - name: Output DNS Name Label
+      if: success()  # Only execute if the previous steps were successful
+      run: |
+        echo "The DNS name label for your ACI is: modpack-inspector.eastus.azurecontainer.io"
