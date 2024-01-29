@@ -54,5 +54,5 @@ jobs:
         image: modpack.azurecr.io/modpack-inspector:${{ github.sha }}
         name: modpack-inspector-aci
         location: eastus
-        dns-name-label: modpack-inspector
+        dns-name-label: modpack-inspector-fadingstar
 
